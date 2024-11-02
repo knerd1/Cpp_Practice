@@ -1,42 +1,39 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;\
+using namespace std;
 
-class Chai{
+class games{
     public:
-         // Data Members (Attributes)
-        string teaName;
-        int servings;
-        vector<string> ingredients;
+        string gameName;
+        int gamePrice;
+        vector<string> category;
 
-         // member function
-        void displayChaiDetails(){
-           cout << "Tea Name: " << teaName << endl;
-           cout << "Servings: " << servings << endl;
-           cout << "Ingredients: ";
-           for(string ingri : ingredients){
-               cout << ingri << " ";
-               }
-            cout << endl;
+        void gamesDetails(){
+            cout << "Game Name: " << gameName << endl;
+            cout << "Price of Game: " << gamePrice << endl;
+            cout << "Category: " ;
+            for(string gamecatelog : category){
+                cout << gamecatelog << " ";
             }
+            cout << endl;
+        }
 };
 
 int main(){
-    Chai chaiOne;
+    games gameOne;
 
-    chaiOne.teaName = "Lemon Tea";
-    chaiOne.servings = 23;
-    chaiOne.ingredients = {"water","Lemon","honey","sugar"};
+    gameOne.gameName = "The Witcher";
+    gameOne.gamePrice = 1564;
+    gameOne.category = {"RPG","Action","Story"};
 
-    chaiOne.displayChaiDetails();
+    gameOne.gamesDetails();
 
-    Chai chaiTwo;
+    games gameTwo;
 
-    chaiTwo.teaName = "Masala tea";
-    chaiTwo.servings = 22;
-    chaiTwo.ingredients = {"water","Milk","Ginger","Masala"};
+    gameTwo.gameName = "Red Dead Redemption";
+    gameTwo.gamePrice = 2231;
+    gameTwo.category = {"Thriller","Action","Shotting"};
 
-    chaiTwo.displayChaiDetails();
-    return 0;
+    gameTwo.gamesDetails();
 }
