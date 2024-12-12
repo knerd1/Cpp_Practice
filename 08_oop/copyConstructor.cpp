@@ -56,6 +56,6 @@ int main() {
 
   animeShows.animeDetails();
   copiedAnimeShows.animeDetails();
-
+ 
   return 0;
 }
