@@ -22,7 +22,7 @@ public:
 
 bool compareEps(const anime &anime1, const anime &anime2) {
   return anime1.animeEps > anime2.animeEps;
-};
+}
 int main() {
   anime onePunch("One Punch", 24);
   anime fullMetal("Full Metal", 64);
