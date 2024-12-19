@@ -3,7 +3,7 @@
 
 using namespace std;
 void sorts() {
-  int arr[6] = {9, 5, 8, 2, 10, 3};
+  int arr[5] = {9, 5, 8, 2, 10};
   int n = sizeof(arr) / sizeof(arr[0]);
   for (int i = 0; i < n - 1; i++) {
     int minIndex = i;
