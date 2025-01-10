@@ -11,7 +11,7 @@ public:
   string *animeCategory;
   vector<string> animeNames;
 
-  // Parameter Consturctor
+  // Parameter Constructor
   Anime(int total, string catelog, vector<string> names) {
     totalAnime = total;
     animeCategory = new string(catelog);
@@ -19,7 +19,7 @@ public:
     cout << "Parameter Consturctor Called" << endl;
   }
 
-  // syntax of copy consturctor
+  // Syntax of copy constructor
   Anime(const Anime &other) {
     totalAnime = other.totalAnime;
     animeCategory = new string(*other.animeCategory);
@@ -46,16 +46,16 @@ public:
 
 int main() {
   Anime animeShows(3, "Action", {"One-piece", "Naruto", "Bleech"});
-  //animeShows.animeDetails();
+  // animeShows.animeDetails();
 
-  // copy the object (from Consturctor)
+  // copy the object (from Constructor)
   Anime copiedAnimeShows = animeShows; // both objects have seperate data
-  //copiedAnimeShows.animeDetails();
+  // copiedAnimeShows.animeDetails();
 
   *animeShows.animeCategory = "SC-FI";
 
   animeShows.animeDetails();
   copiedAnimeShows.animeDetails();
- 
+
   return 0;
 }
