@@ -26,7 +26,7 @@ int sums(int n) {
   return n + sums(n - 1);
 }
 
-int main() {
+int maim() {
   int n;
   cin >> n;
   int result = sums(n);
