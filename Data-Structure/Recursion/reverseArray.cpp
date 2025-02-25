@@ -10,8 +10,8 @@ using namespace std;
 //   rev(a, l + 1, r - 1);
 // }
 //
-//int main() {
-//int a[5];
+// int main() {
+// int a[5];
 //   for (int i = 0; i < 5; i++) {
 //     cin >> a[i];
 //   }
