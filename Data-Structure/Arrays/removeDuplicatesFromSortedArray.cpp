@@ -3,7 +3,7 @@
 
 using namespace std;
 
-//Brute Force Approach
+// Brute Force Approach...
 int arr[7] = {1, 2, 2, 3, 3, 3, 4};
 set<int> st;
 int main() {
@@ -15,7 +15,19 @@ int main() {
     arr[index] = it;
     index++;
   }
-  for (int i = 0; i < arr[index]; i++) {
+  for (int i = 0; i < index; i++) {
     cout << arr[i] << endl;
   }
+}
+
+// optimal...
+
+int i = 0;
+int main() {
+  for (int j = 1; j < 7; i++) {
+    if (arr[j] != arr[i])
+      i++;
+    arr[i] = arr[j];
+  }
+  cout << i + 1;
 }
