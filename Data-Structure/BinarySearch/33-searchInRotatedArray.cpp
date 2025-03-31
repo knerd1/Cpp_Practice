@@ -19,7 +19,8 @@ int roatedSearch(vector<int> nums, int target, int n) {
 
     // Left Half
     if (nums[low] <= nums[mid]) {
-      if (nums[low] <= target && target <= nums[mid]) {
+      if (nums[low] <= target &&
+          target <= nums[mid]) { // Check element is in this half
         high = mid - 1;
       } else {
         low = mid + 1;
@@ -27,7 +28,8 @@ int roatedSearch(vector<int> nums, int target, int n) {
     }
 
     else { // right half
-      if (nums[mid] <= target && target <= nums[high]) {
+      if (nums[mid] <= target &&
+          target <= nums[high]) { // Check element is in this half
         low = mid + 1;
       } else {
         high = mid - 1;
@@ -37,7 +39,7 @@ int roatedSearch(vector<int> nums, int target, int n) {
   return -1;
 }
 
-int main(){
-  int result = roatedSearch(nums,  target,n);
+int main() {
+  int result = roatedSearch(nums, target, n);
   cout << result << endl;
 }
